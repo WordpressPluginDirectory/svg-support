@@ -3,14 +3,13 @@ Contributors: Benbodhi
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z9R7JERS82EQQ
 Tags: svg, vector, safe svg, sanitization, mime type
 Requires at least: 5.8
-Tested up to: 6.7.2
+Tested up to: 6.7.3
 Requires PHP: 7.4
-Stable tag: 2.5.9
+Stable tag: 2.5.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Securely upload SVG files to your media library, with built-in sanitization and advanced features for styling and animation.
-
 
 == Description ==
 
@@ -151,6 +150,25 @@ You need to add the mime type for svg and svgz to: "MLA Settings > Media Library
 
 
 == Changelog ==
+
+= 2.5.13 =
+* **Code Improvements**:
+    - Better PHP 8.3 compatibility - added null checks to prevent deprecated warnings in PHP 8.3
+
+= 2.5.12 =
+* **General Updates**:
+    - Added blueprint.json for the live preview feature on wordpress.org
+
+* **Fixes**:
+    - Fixed mime type check that was restricting SVG uploads without the XML tag in PHP 7.4
+
+= 2.5.11 =
+* **Security Enhancement**
+    - Added more effective handling of sanitization for REST API uploads
+
+= 2.5.10 =
+* **Fixes**:
+    - Fixed issue with upload checks preventing plugin uploads
 
 = 2.5.9 =
 * **New Features**:
@@ -458,6 +476,19 @@ You need to add the mime type for svg and svgz to: "MLA Settings > Media Library
 
 
 == Upgrade Notice ==
+
+= 2.5.13 =
+Better PHP 8.3 compatibility (added null checks to prevent deprecated warnings in PHP 8.3)
+
+= 2.5.12 =
+Fixes mime type check that was restricting SVG uploads without the XML tag in PHP 7.4
+
+= 2.5.11 =
+Security update: added more effective handling of sanitization for REST API uploads
+
+= 2.5.10 =
+Fixed issue with upload checks preventing plugin uploads
+
 = 2.5.9 =
 Important security update that adds enhanced upload validation, MIME type checking, and CSRF protection. Please backup before updating. No configuration changes required - all security improvements work automatically.
 
